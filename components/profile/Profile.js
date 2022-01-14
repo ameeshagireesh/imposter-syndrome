@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Profile() {
   return (
-    <div className="flex flex-row gap-8 mx-auto justify-center">
+    <div className="flex flex-row gap-8 mx-auto justify-center mb-10">
       <div className="bg-gray-700 flex flex-col items-center p-4 rounded-3xl gap-2">
         <div className="">
           <Image

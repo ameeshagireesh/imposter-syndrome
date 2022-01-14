@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from "next/router";
-import Dashboard from "../../components/dashboard./Dashboard";
+import Dashboard from "../../components/dashboard/Dashboard";
+import Description from "../../components/description/Description";
 import Profile from "../../components/profile/Profile";
 
 function profile() {
@@ -11,6 +12,7 @@ function profile() {
     <div className="mx-8">
       <Profile />
       <Dashboard />
+      <Description />
     </div>
   );
 }
