@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="bg-zinc-900 grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-2 gap-2">
       <Head>
         <title>Imposter Syndrome | Home</title>
         <meta name="keywords" content="imposter" />
