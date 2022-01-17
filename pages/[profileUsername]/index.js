@@ -4,6 +4,7 @@ import Dashboard from "../../components/Dashboard";
 import Description from "../../components/Description";
 import Heading from "../../components/Heading";
 import Profile from "../../components/Profile";
+import Skills from "../../components/Skills";
 
 function profile() {
   const router = useRouter();
@@ -16,6 +17,8 @@ function profile() {
       <Dashboard />
       <Heading variant="h1" content="Description" />
       <Description />
+      <Heading variant="h1" content="Skills" />
+      <Skills />
     </div>
   );
 }
