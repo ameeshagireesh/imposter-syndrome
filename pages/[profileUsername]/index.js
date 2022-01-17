@@ -11,7 +11,7 @@ function profile() {
   const { profileUsername } = router.query;
 
   return (
-    <div className="mx-4 md:mx-8 lg:mx-28">
+    <div className="mx-2 sm:mx-4 md:mx-8 lg:mx-28">
       <Profile />
       <Heading variant="h1" content="Dashboard" />
       <Dashboard />
