@@ -18,31 +18,31 @@ const  Login =() => {
                     <textarea></textarea>
                 </div>
                 <div>
-                    <div class="block">
-                        <div class="mt-2">
-                            <label class="inline-flex items-center">
-                            <input type="checkbox" class="w-6 h-6 rounded"  />
-                            <span class="ml-2">Remember me.</span>
+                    <div className="block">
+                        <div className="mt-2">
+                            <label className="inline-flex items-center">
+                            <input type="checkbox" className="w-6 h-6 rounded"  />
+                            <span className="ml-2">Remember me.</span>
                             </label>
                         </div>
                     </div>
                 </div>
                 <div>
                     <Link href="">
-                        <button>Log In</button>
+                        <a>Log In</a>
                     </Link>
                 </div>
                 <div>
                     <Link href="">
-                        <button>Forgot Password?</button>
+                        <a>Forgot Password?</a>
                     </Link>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                     <Link href="">
-                        <button className="bg-zinc-300 rounded-lg p-3">GitHub</button>
+                        <a className="bg-zinc-300 rounded-lg p-3">GitHub</a>
                     </Link>
                     <Link href="">
-                        <button className="bg-zinc-300 rounded-lg">Google</button>
+                        <a className="bg-zinc-300 rounded-lg">Google</a>
                     </Link>
                 </div>
             </div>

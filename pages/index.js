@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,7 +11,12 @@ export default function Home() {
         <meta name="keywords" content="imposter" />
       </Head>
       <div className="flex justify-center p-20">
-        <Image src="/../public/diagram.jpeg" height={500} width={500}></Image>
+        <Image
+          src="/diagram.jpeg"
+          height={500}
+          width={500}
+          alt="image"
+        ></Image>
       </div>
       <div className="grid grid-cols-1 content-center">
         <div>
@@ -20,10 +25,11 @@ export default function Home() {
           <p className="pt-8 pb-8"> Lorem Ipsum (Project Description)</p>
           <div>
             <Link href="/signup">
-            <button className="rounded-full bg-zinc-300 p-3">Get Started!</button></Link>
+              <a className="rounded-full bg-zinc-300 p-3">Get Started!</a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -12,11 +12,11 @@ const Signup = () => {
                 <div className="grid grid-cols-1 gap-2 place-items-center">
                     <div className="">
                         <Link href="">
-                        <button className="bg-zinc-300 rounded-lg p-3">Sign Up with Google</button></Link>
+                        <a className="bg-zinc-300 rounded-lg p-3">Sign Up with Google</a></Link>
                     </div>
                     <div className="">
                         <Link href="">
-                        <button className="bg-zinc-300 rounded-lg p-3">Sign Up with GitHub</button></Link>
+                        <a className="bg-zinc-300 rounded-lg p-3">Sign Up with GitHub</a></Link>
                     </div>
                 </div>
                 <div className="grid place-items-center">
@@ -38,12 +38,12 @@ const Signup = () => {
                     </div>
                     <div className="p-2">
                         <Link href="">
-                            <button className="bg-zinc-300 rounded-lg p-3">Sign me Up!</button>
+                            <a className="bg-zinc-300 rounded-lg p-3">Sign me Up!</a>
                         </Link>
                     </div>
                     <div className="p-2">
                         <Link href="/login">
-                            <button className="bg-zinc-300 rounded-lg p-3">Log In</button>
+                            <a className="bg-zinc-300 rounded-lg p-3">Log In</a>
                         </Link>
                     </div>
                 </div>
