@@ -12,11 +12,12 @@ const tabs = [
   { title: "Preview", icon: null },
 ];
 
-export default function MarkdownEditor() {
-  const [markdownContent, setMarkdownContent] = useState(sampleDescription);
-
+export default function MarkdownEditor({
+  markdownContent,
+  setMarkdownContent,
+}) {
   return (
-    <div className="w-full px-2 py-10 sm:px-0">
+    <div className="w-full sm:px-0">
       <Tab.Group>
         <Tab.List className="flex bg-gray-800 rounded-t-xl overflow-hidden">
           {tabs.map((tabContent, index) => {
@@ -40,7 +41,6 @@ export default function MarkdownEditor() {
         <Tab.Panels className="rounded-b-xl overflow-hidden">
           <Tab.Panel className={classNames("bg-gray-700 p-3")}>
             <textarea
-              autoFocus
               id="markdownEditor"
               className="w-full h-96 bg-transparent outline-none scroll-auto resize-y"
               value={markdownContent}

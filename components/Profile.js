@@ -7,9 +7,8 @@ function Profile() {
       className="w-fit flex flex-col sm:flex-row gap-4 md:gap-8 mx-auto justify-center items-center mt-10"
     >
       <div className="relative bg-gray-700 flex flex-row sm:flex-col items-center p-2 md:p-4 rounded-xl gap-2 sm:gap-2">
-        <div className="w-28 sm:w-32 md:w-40 lg:w-48">
+        <div className="w-28 sm:w-32 md:w-40 lg:w-48 h-28 sm:h-32 md:h-40 lg:h-48 bg-gray-900 rounded-xl overflow-hidden">
           <Image
-            className="rounded-xl"
             src="/profile.jpg"
             width="200px"
             height="200px"

@@ -1,40 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 
-const dropdownItems = [
-  {
-    title: "Profile",
-    navigateTo: "#userProfile",
-    activeIcon: null,
-    inactiveIcon: null,
-  },
-  {
-    title: "Dashboard",
-    navigateTo: "#dashboard",
-    activeIcon: null,
-    inactiveIcon: null,
-  },
-  {
-    title: "Description",
-    navigateTo: "#description",
-    activeIcon: null,
-    inactiveIcon: null,
-  },
-  {
-    title: "Skills",
-    navigateTo: "#skills",
-    activeIcon: null,
-    inactiveIcon: null,
-  },
-  {
-    title: "Activity",
-    navigateTo: "#activity",
-    activeIcon: null,
-    inactiveIcon: null,
-  },
-];
-
-export default function ProfileDropdown() {
+export default function ProfileDropdown({ dropdownItems }) {
   function scrollToElement(element) {
     const e = document.querySelector(element);
     if (e) {
