@@ -2,6 +2,7 @@
 import { useRouter } from "next/router";
 import Dashboard from "../../components/Dashboard";
 import Description from "../../components/Description";
+import EditProfile from "../../components/EditProfile";
 import Heading from "../../components/Heading";
 import Profile from "../../components/Profile";
 import ProfileDropdown from "../../components/ProfileDropdown";
@@ -14,6 +15,7 @@ function profile() {
   return (
     <div className="mx-2 sm:mx-4 md:mx-8 lg:mx-28 relative">
       <ProfileDropdown />
+      <EditProfile />
       <Profile />
       <Heading variant="h1" content="Dashboard" customId="dashboard" />
       <Dashboard />

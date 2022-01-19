@@ -43,7 +43,7 @@ export default function ProfileDropdown() {
   }
 
   return (
-    <div className="text-right fixed top-3 right-2 sm:right-4 md-right-8 lg:right-28 z-30">
+    <div className="text-right fixed top-3 right-2 sm:right-4 md:right-8 lg:right-28 z-30">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="z-10 inline-flex justify-center w-full p-2 text-2xl font-medium text-white bg-black rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">

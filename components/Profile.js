@@ -27,7 +27,7 @@ function Profile() {
       </div>
       <div className="flex flex-col self-center text-center sm:text-left items-center sm:items-start">
         <h1 className="font-bold text-lg md:text-3xl">Ameesha Gireesh</h1>
-        <h2 className="text-base md:text-xl mb-4">ameeshagireesh</h2>
+        <h2 className="text-base md:text-xl text-gray-200 mb-4">ameeshagireesh</h2>
         <h2 className="text-sm md:text-xl text-gray-400 mb-4">
           Joined {new Date().getFullYear()}
         </h2>
