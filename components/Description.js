@@ -1,53 +1,19 @@
 /* eslint-disable react/no-children-prop */
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { sampleDescription } from "./common/sampleDescription";
 
-export const markdown = `
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-A paragraph with *emphasis* and **strong importance**.
-
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.  
-
-This is a sample \`variable\`
-
-\`\`\`js
-function Description() {
+function Description({ markdownContent = sampleDescription }) {
   return (
-    <div id="markdown" className="bg-gray-700 p-4 rounded-xl">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
-    </div>
-  );
-}
-\`\`\`
-
-Unordered List
-* Bullet
-* [ ] todo
-* [x] done
-
-Ordered List
-1. \`hello\`
-2. hello 2
-
-A table:
-
-| heading 1 | heading 2 |
-| - | - |
-| a | b |
-| a | b |
-
-![Imgur](https://imgur.com/I66f1ob.png)
-`;
-
-function Description() {
-  return (
-    <div id="markdown" className="bg-gray-700 p-4 rounded-xl">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
+    <div className="rounded-xl overflow-hidden">
+      <div id="markdown" className="bg-gray-700 p-4 ">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {markdownContent}
+        </ReactMarkdown>
+      </div>
+      <p className="bg-gray-800 px-3 py-1 text-xs">
+        Powered by <b>react-markdown</b> and <b>remark-gfm</b>
+      </p>
     </div>
   );
 }
