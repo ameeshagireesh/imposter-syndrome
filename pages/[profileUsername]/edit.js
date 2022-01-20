@@ -49,7 +49,7 @@ function Edit() {
       <button
         type="submit"
         form="editProfileForm"
-        className="text-right fixed top-3 right-14 cursor-pointer sm:right-16 md:right-20 lg:right-40 z-30 inline-flex justify-center p-2 text-2xl font-medium text-white bg-black rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        className="text-right fixed top-14 right-14 cursor-pointer sm:right-16 md:right-20 lg:right-40 z-30 inline-flex justify-center p-2 text-2xl font-medium text-white bg-black rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
       >
         <SaveIcon />
       </button>
@@ -158,17 +158,6 @@ function Edit() {
         </div>
       </form>
       <div className={sectionStyle}>
-        <Heading
-          variant="h3"
-          content="Description"
-          customId="editDescription"
-        />
-        <MarkdownEditor
-          markdownContent={markdownContent}
-          setMarkdownContent={setMarkdownContent}
-        />
-      </div>
-      <div className={sectionStyle}>
         <Heading variant="h3" content="Skills" customId="editSkills" />
         <ul className="flex flex-row gap-2 flex-wrap list-none mb-3">
           {userSkills.map((skill, index) => (
@@ -178,7 +167,7 @@ function Edit() {
               </li>
               <div
                 onClick={(e) => deleteSkill(index)}
-                className="text-red-300 bg-gray-700 rounded-r-2xl pr-1 py-2 cursor-pointer"
+                className="text-red-300 bg-gray-700 rounded-r-2xl pr-2 py-2 cursor-pointer"
               >
                 <DeleteIcon />
               </div>
@@ -190,6 +179,17 @@ function Edit() {
           onKeyPress={(e) => addSkill(e)}
           placeholder="Press enter to add"
           className={inputStyle}
+        />
+      </div>
+      <div className={sectionStyle}>
+        <Heading
+          variant="h3"
+          content="Description"
+          customId="editDescription"
+        />
+        <MarkdownEditor
+          markdownContent={markdownContent}
+          setMarkdownContent={setMarkdownContent}
         />
       </div>
     </div>
@@ -210,14 +210,14 @@ const dropdownItems = [
     inactiveIcon: null,
   },
   {
-    title: "Edit description",
-    navigateTo: "#editDescription",
+    title: "Edit skills",
+    navigateTo: "#editSkills",
     activeIcon: null,
     inactiveIcon: null,
   },
   {
-    title: "Edit skills",
-    navigateTo: "#editSkills",
+    title: "Edit description",
+    navigateTo: "#editDescription",
     activeIcon: null,
     inactiveIcon: null,
   },

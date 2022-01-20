@@ -19,10 +19,10 @@ function profile() {
       <Profile />
       <Heading variant="h1" content="Dashboard" customId="dashboard" />
       <Dashboard />
-      <Heading variant="h1" content="Description" customId="description" />
-      <Description />
       <Heading variant="h1" content="Skills" customId="skills" />
       <Skills />
+      <Heading variant="h1" content="Description" customId="description" />
+      <Description />
     </div>
   );
 }
@@ -41,14 +41,14 @@ const dropdownItems = [
     inactiveIcon: null,
   },
   {
-    title: "Description",
-    navigateTo: "#description",
+    title: "Skills",
+    navigateTo: "#skills",
     activeIcon: null,
     inactiveIcon: null,
   },
   {
-    title: "Skills",
-    navigateTo: "#skills",
+    title: "Description",
+    navigateTo: "#description",
     activeIcon: null,
     inactiveIcon: null,
   },
