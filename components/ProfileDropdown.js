@@ -4,8 +4,11 @@ import { Fragment, useEffect, useRef, useState } from "react";
 export default function ProfileDropdown({ dropdownItems }) {
   function scrollToElement(element) {
     const e = document.querySelector(element);
+    const offset = 50;
+
     if (e) {
-      e.scrollIntoView({ block: "start", behavior: "smooth" });
+      const elementPosition = e.getBoundingClientRect().top;
+      window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
   }
 
