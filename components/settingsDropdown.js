@@ -6,6 +6,7 @@ import { UserIcon } from "./Icons";
 
 function SettingsDropdown() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   const dropdownRef = useRef();
 
   function toggleDropdown() {
@@ -29,30 +30,26 @@ function SettingsDropdown() {
   function MenuProfile({ props }) {
     return (
       <>
-        {true ? (
-          <div className="flex gap-2 p-2 h-fit items-center" {...props}>
-            <Image
-              src="/profile.jpg"
-              width="50px"
-              height="50px"
-              alt="profile image"
-              className="rounded-full overflow-hidden"
-            />
-            <div className="flex flex-col items-start justify-center gap-1">
-              <h6 className="text-sm">Ameesha Gireesh</h6>
-              <Link href="/ameeshagireesh">
-                <a
-                  className="text-xs text-center bg-white text-gray-900 font-bold px-1 py-0.25 w-full rounded-md"
-                  onClick={closeDropdown}
-                >
-                  View Profile
-                </a>
-              </Link>
-            </div>
+        <div className="flex gap-2 p-2 h-fit items-center" {...props}>
+          <Image
+            src="/profile.jpg"
+            width="50px"
+            height="50px"
+            alt="profile image"
+            className="rounded-full overflow-hidden"
+          />
+          <div className="flex flex-col items-start justify-center gap-1">
+            <h6 className="text-sm">Ameesha Gireesh</h6>
+            <Link href="/ameeshagireesh">
+              <a
+                className="text-xs text-center bg-white text-gray-900 font-bold px-1 py-0.25 w-full rounded-md"
+                onClick={closeDropdown}
+              >
+                View Profile
+              </a>
+            </Link>
           </div>
-        ) : (
-          <></>
-        )}
+        </div>
       </>
     );
   }
@@ -64,7 +61,7 @@ function SettingsDropdown() {
 
     return (
       <div className="p-2 flex flex-col items-center gap-2" {...props}>
-        {false ? (
+        {loggedIn ? (
           <button
             onClick={logout}
             className="border-red-600 border-1 rounded-lg text-red-600 text-sm hover:bg-red-600 hover:text-white transition-all ease-in-out w-full px-2 py-0.5"
@@ -73,6 +70,7 @@ function SettingsDropdown() {
           </button>
         ) : (
           <>
+            <p className="text-red-500 text-sm text-center">Currently not logged in!</p>
             <Link href="/login">
               <a
                 onClick={closeDropdown}
@@ -130,12 +128,16 @@ function SettingsDropdown() {
           tabIndex="0"
           ref={dropdownRef}
         >
-          <MenuProfile />
-          <MenuItem>Settings</MenuItem>
-          <MenuItem>Edit Profile</MenuItem>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>Profile</MenuItem>
+          {loggedIn && (
+            <>
+              <MenuProfile />
+              <MenuItem>Settings</MenuItem>
+              <MenuItem>Edit Profile</MenuItem>
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>Profile</MenuItem>
+            </>
+          )}
           <AuthStatus />
         </div>
       </Transition>
